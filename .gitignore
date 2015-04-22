@@ -1,0 +1,21 @@
+# bin and obj directories at any depth
+bin/
+obj/
+
+# Visual studio files
+*.sln.DotSettings.user
+*.csproj.user
+*.suo
+
+# Resharper files
+*resharper*
+_resharper*/
+
+# MS Test runner add-in results directories at any depth
+TestResults/
+
+# bin directories exclusions
+!lib/NUnit/bin/
+
+# JMeter log
+jmeter.log

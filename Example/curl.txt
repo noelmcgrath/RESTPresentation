@@ -1,0 +1,21 @@
+
+
+$data ='{ \"drink\": \"cofee\"}'
+curl.exe -v -H 'Accept: application/json' -H 'Content-type: application/json' -X POST -d $data --insecure http://localhost:7000/api/orders
+
+curl.exe -v -H 'Accept: application/json' -X GET  --insecure http://localhost:7000/api/orders/123
+
+$data ='{ \"additions\": \"invalid\"}'
+curl.exe -v -H 'Accept: application/json' -H 'Content-type: application/json' -X PUT -d $data --insecure http://localhost:7000/api/orders/123
+
+$data ='{ \"additions\": \"milk\"}'
+curl.exe -v -H 'Accept: application/json' -H 'Content-type: application/json' -X PUT -d $data --insecure http://localhost:7000/api/orders/123
+
+
+$data ='{ \"cardNo\": \"444\", \"amount\": 4.81}'
+curl.exe -v -H 'Accept: application/json' -H 'Content-type: application/json' -X PUT -d $data --insecure http://localhost:7000/api/payment/123
+
+
+$data ='{ \"cardNo\": \"444\", \"amount\": 4.80}'
+curl.exe -v -H 'Accept: application/json' -H 'Content-type: application/json' -X PUT -d $data --insecure http://localhost:7000/api/payment/123
+
